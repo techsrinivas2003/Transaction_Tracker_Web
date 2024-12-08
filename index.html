@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transaction Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <h1 id="heads">Track as You Spend!!</h1>
+  <div id="app">
+    <div id="budget-form">
+      <h1>Budget</h1>
+      <input type="text" id="budget" placeholder="Enter your budget">
+      <button onclick="setBudget()">Set Budget</button>
+      <button onclick="resetData()">Reset</button>
+      <button onclick="downloadTransactions()">Download Transactions</button>
+      <p id="budgetStatus"></p>
+    </div>
+
+
+    <div id="transaction-form">
+      <h1>Add Transaction</h1>
+
+      <select id="transactionType">
+        <option value="expense">Expense</option>
+        <option value="income">Income</option>
+      </select>
+      <input type="text" id="amount" placeholder="Enter amount">
+      <input type="text" id="remark" placeholder="Enter a remark">
+      <button onclick="addTransaction()">Add Transaction</button>
+    </div>
+    <div id="transactions">
+      <h1>Transactions</h1>
+      <ul id="transactionList"></ul>
+    </div>
+  </div>
+</body>
+</html>
